@@ -1,0 +1,7 @@
+﻿  NRGmain.cpp
+C:\dev\NRG engine 2D\NRG engine\Core\NRGmain.cpp(4,10): warning C4067:  unexpected tokens following preprocessor directive - expected a newline
+C:\dev\NRG engine 2D\NRG engine\Core\NRGmain.cpp(9,1): warning C4005:  'static': macro redefinition
+C:\dev\NRG engine 2D\NRG engine\Core\NRGmain.cpp(8): message :  see previous definition of 'static'
+C:\dev\NRG engine 2D\NRG engine\Core\NRGmain.cpp(10,1): warning C4005:  'static': macro redefinition
+C:\dev\NRG engine 2D\NRG engine\Core\NRGmain.cpp(9): message :  see previous definition of 'static'
+  NRG engine.vcxproj -> C:\dev\NRG engine 2D\Debug\NRG engine.exe

@@ -1,6 +1,7 @@
-#include <stdio.h>
-// include <GLFW3.h>
-// include <GLEW.h>        --> IT WILL BE NEED FOR USING MODERN OPENGL!
+#define GLEW_STATIC
+#include <GL/glew.h>
+#include <GLFW/glfw3.h>
+#include <stdio.h>    --> IT WILL BE NEED FOR USING MODERN OPENGL!
 
 
 
@@ -8,6 +9,46 @@
 #define static local_persist // static vairable in the functin
 #define static internal // that mean what function has a scope that is limited to its object file.x
 
+
+int main()
+{
+	glfwInit();
+
+	GLFWwindow* window = glfwCreateWindow(1000, 500, "NRG engine", 0, 0);
+	if (window == NULL)
+	{
+		printf("Failed create GLFW window");
+		glfwTerminate();
+		return -1;
+	}
+	glfwMakeContextCurrent(window);
+
+	glewExperimental = GL_TRUE;
+	if (glewInit() != GLEW_OK)
+	{
+		printf("Failed to initialize GLEW");
+		return -1;
+	}
+
+	int width, height;
+	glfwGetFramebufferSize(window, &width, &height);
+
+	glViewport(0, 0, width, height);
+
+	while (!glfwWindowShouldClose(window))
+	{
+		glfwPollEvents();
+		// Draw commands here
+		glClearColor(0.1f, 0.5f, 0.3f, 3.0f);
+		glClear(GL_COLOR_BUFFER_BIT);
+
+		glfwSwapBuffers(window);
+	}
+
+	glfwTerminate();
+
+	return 0;
+}
 internal void HandleKeyboard(GLFWwindow *Window) // function arg it is open gl window
 {
   
@@ -72,22 +113,3 @@ internal void proccessInput() // I think this function should determinate if it 
     }
 }
 
-void main()
-{
-  // init Opengl and create open gl Window
-#if 0
-  	while (true)
-	{
-		extern Event* event = waitForEvent();
-		dispatchEvent(event);
-	}
-
-	while (true)
-	{
-	  processInput(); // mouse or keyboard
-		update();
-		render();
-	}
-#endif
-	
-}

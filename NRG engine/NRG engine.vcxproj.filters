@@ -1,16 +1,33 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="core">
-      <UniqueIdentifier>{95017f64-17d5-4151-8971-b78677ecaebe}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Event system">
-      <UniqueIdentifier>{4c037034-e9ad-4353-8b4d-5419de6dd8c7}</UniqueIdentifier>
+      <UniqueIdentifier>{df1e209f-7a39-4178-85e2-6eba95fe0122}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core">
+      <UniqueIdentifier>{43688338-440d-4bba-a88a-344cbae9cb7a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="NRGmain.cpp">
-      <Filter>core</Filter>
+    <ClInclude Include="Event system\MouseEvents.h">
+      <Filter>Event system</Filter>
+    </ClInclude>
+    <ClInclude Include="Event system\KeyboardEvents.h">
+      <Filter>Event system</Filter>
+    </ClInclude>
+    <ClInclude Include="Event system\Event.h">
+      <Filter>Event system</Filter>
+    </ClInclude>
+    <ClInclude Include="Event system\ApplicationEvents.h">
+      <Filter>Event system</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Core\Window.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\NRGmain.cpp">
+      <Filter>Core</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
