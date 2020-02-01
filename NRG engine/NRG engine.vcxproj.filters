@@ -7,6 +7,9 @@
     <Filter Include="Core">
       <UniqueIdentifier>{43688338-440d-4bba-a88a-344cbae9cb7a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="event">
+      <UniqueIdentifier>{706693e6-c117-4ce8-a500-66b77679518d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Event system\MouseEvents.h">
@@ -21,13 +24,28 @@
     <ClInclude Include="Event system\ApplicationEvents.h">
       <Filter>Event system</Filter>
     </ClInclude>
+    <ClInclude Include="event.h">
+      <Filter>event</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowEvent.h">
+      <Filter>event</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Core\Window.cpp">
-      <Filter>Core</Filter>
-    </ClCompile>
     <ClCompile Include="Core\NRGmain.cpp">
       <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Window.h">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="key.h">
+      <Filter>event</Filter>
+    </ClCompile>
+    <ClCompile Include="MouseEvent.h">
+      <Filter>event</Filter>
+    </ClCompile>
+    <ClCompile Include="KeyEvent.h">
+      <Filter>event</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

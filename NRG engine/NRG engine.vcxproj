@@ -138,10 +138,15 @@
     <ClInclude Include="Event system\Event.h" />
     <ClInclude Include="Event system\KeyboardEvents.h" />
     <ClInclude Include="Event system\MouseEvents.h" />
+    <ClInclude Include="event.h" />
+    <ClInclude Include="WindowEvent.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Core\NRGmain.cpp" />
-    <ClCompile Include="Core\Window.cpp" />
+    <ClCompile Include="Core\Window.h" />
+    <ClCompile Include="key.h" />
+    <ClCompile Include="KeyEvent.h" />
+    <ClCompile Include="MouseEvent.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

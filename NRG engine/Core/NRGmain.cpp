@@ -1,7 +1,7 @@
 #define GLEW_STATIC
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
-#include <stdio.h>    --> IT WILL BE NEED FOR USING MODERN OPENGL!
+#include <stdio.h>   //--> IT WILL BE NEED FOR USING MODERN OPENGL!
 
 
 
@@ -46,9 +46,10 @@ int main()
 	}
 
 	glfwTerminate();
-
 	return 0;
 }
+
+/*
 internal void HandleKeyboard(GLFWwindow *Window) // function arg it is open gl window
 {
   
@@ -113,3 +114,4 @@ internal void proccessInput() // I think this function should determinate if it 
     }
 }
 
+*/
