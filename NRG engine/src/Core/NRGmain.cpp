@@ -65,7 +65,7 @@ int main(int argc, char** argv)
 
 	bool show_demo_window = true;
 	bool show_another_window = false;
-	ImVec4 clear_color = ImVec4(0.3f, 0.1f, 1.0f, 1.0f);
+	ImVec4 clear_color = ImVec4(0.01f, 0.01f, 0.3f, 1.00f);
 	//ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f); default
 
 	// Main loop
@@ -74,7 +74,32 @@ int main(int argc, char** argv)
 		//for Events
 		glfwPollEvents();
 
-		imguiImpl.imgui_settings(show_demo_window, clear_color);
+		ImGui_ImplOpenGL3_NewFrame();
+		ImGui_ImplGlfw_NewFrame();
+		ImGui::NewFrame();
+
+		if (show_demo_window)
+			ImGui::ShowDemoWindow(&show_demo_window);
+
+		{
+			static float f = 0.0f;
+
+			ImGui::Begin("Settings");
+
+			ImGui::Checkbox("Main Window", &show_demo_window);
+			//ImGui::Checkbox("Another Window", &show_another_window);
+
+			ImGui::SliderFloat("float", &f, 0.0f, 1.0f);
+			ImGui::ColorEdit3("change color\n", (float*)& clear_color);
+
+			//ImGui::SameLine();
+
+			ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
+			ImGui::End();
+
+			ImGui::Render();
+
+		}
 
 		int w, h;
 		glfwMakeContextCurrent(window);
@@ -83,7 +108,7 @@ int main(int argc, char** argv)
 		glClearColor(clear_color.x, clear_color.y, clear_color.z, clear_color.w);
 		glClear(GL_COLOR_BUFFER_BIT);
 
-		imguiImpl.imgui_render();
+		ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 
 		glfwMakeContextCurrent(window);
 		glfwSwapBuffers(window);
