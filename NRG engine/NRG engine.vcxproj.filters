@@ -1,51 +1,54 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Event system">
-      <UniqueIdentifier>{df1e209f-7a39-4178-85e2-6eba95fe0122}</UniqueIdentifier>
-    </Filter>
+    <ClInclude Include="src\Event system\event.h">
+      <Filter>Event system</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Event system\key.h">
+      <Filter>Event system</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Event system\KeyEvent.h">
+      <Filter>Event system</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Event system\MouseEvent.h">
+      <Filter>Event system</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Event system\WindowEvent.h">
+      <Filter>Event system</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\imgui\examples\imgui_impl_glfw.h" />
+    <ClInclude Include="vendor\imgui\examples\imgui_impl_opengl3.h" />
+    <ClInclude Include="vendor\imgui\imconfig.h" />
+    <ClInclude Include="vendor\imgui\imgui.h" />
+    <ClInclude Include="vendor\imgui\imgui_internal.h" />
+    <ClInclude Include="vendor\imgui\imstb_rectpack.h" />
+    <ClInclude Include="vendor\imgui\imstb_textedit.h" />
+    <ClInclude Include="vendor\imgui\imstb_truetype.h" />
+    <ClInclude Include="src\imgui\imguiImpl.h" />
+    <ClInclude Include="src\Core\window\window.h" />
+  </ItemGroup>
+  <ItemGroup>
     <Filter Include="Core">
-      <UniqueIdentifier>{43688338-440d-4bba-a88a-344cbae9cb7a}</UniqueIdentifier>
+      <UniqueIdentifier>{f89c32d0-1936-46ad-aa95-c994cbce50f3}</UniqueIdentifier>
     </Filter>
-    <Filter Include="event">
-      <UniqueIdentifier>{706693e6-c117-4ce8-a500-66b77679518d}</UniqueIdentifier>
+    <Filter Include="Event system">
+      <UniqueIdentifier>{ef0fd149-0433-4098-bf95-a65431a0266e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="imgui">
+      <UniqueIdentifier>{d5bb41ad-937f-4356-9956-6b98f27cc923}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Event system\MouseEvents.h">
-      <Filter>Event system</Filter>
-    </ClInclude>
-    <ClInclude Include="Event system\KeyboardEvents.h">
-      <Filter>Event system</Filter>
-    </ClInclude>
-    <ClInclude Include="Event system\Event.h">
-      <Filter>Event system</Filter>
-    </ClInclude>
-    <ClInclude Include="Event system\ApplicationEvents.h">
-      <Filter>Event system</Filter>
-    </ClInclude>
-    <ClInclude Include="event.h">
-      <Filter>event</Filter>
-    </ClInclude>
-    <ClInclude Include="WindowEvent.h">
-      <Filter>event</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Core\NRGmain.cpp">
+    <ClCompile Include="src\Core\NRGmain.cpp">
       <Filter>Core</Filter>
     </ClCompile>
-    <ClCompile Include="Core\Window.h">
-      <Filter>Core</Filter>
-    </ClCompile>
-    <ClCompile Include="key.h">
-      <Filter>event</Filter>
-    </ClCompile>
-    <ClCompile Include="MouseEvent.h">
-      <Filter>event</Filter>
-    </ClCompile>
-    <ClCompile Include="KeyEvent.h">
-      <Filter>event</Filter>
-    </ClCompile>
+    <ClCompile Include="vendor\imgui\examples\imgui_impl_glfw.cpp" />
+    <ClCompile Include="vendor\imgui\examples\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="vendor\imgui\imgui.cpp" />
+    <ClCompile Include="vendor\imgui\imgui_demo.cpp" />
+    <ClCompile Include="vendor\imgui\imgui_draw.cpp" />
+    <ClCompile Include="vendor\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="src\imgui\imguiImpl.cpp" />
+    <ClCompile Include="src\Core\window\window.cpp" />
   </ItemGroup>
 </Project>

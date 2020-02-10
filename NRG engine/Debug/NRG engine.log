@@ -1,18 +1,6 @@
-﻿  key.h
-  KeyEvent.h
-C:\dev\NRG engine 2D\NRG engine\event.h(26,2): warning C4091:  'typedef ': ignored on left of 'Event_t' when no variable is declared
-C:\dev\NRG engine 2D\NRG engine\event.h(31,2): warning C4091:  'typedef ': ignored on left of 'EventHandler_t' when no variable is declared
-C:\dev\NRG engine 2D\NRG engine\KeyEvent.h(12,2): warning C4091:  'typedef ': ignored on left of 'KeyButton_t' when no variable is declared
-C:\dev\NRG engine 2D\NRG engine\KeyEvent.h(20,2): warning C4091:  'typedef ': ignored on left of 'KeyPressed_t' when no variable is declared
-C:\dev\NRG engine 2D\NRG engine\KeyEvent.h(28,2): warning C4091:  'typedef ': ignored on left of 'KeyReleased_t' when no variable is declared
-  MouseEvent.h
-C:\dev\NRG engine 2D\NRG engine\KeyEvent.h(48,2): warning C4091:  'typedef ': ignored on left of 'EventDispatcher_t' when no variable is declared
-C:\dev\NRG engine 2D\NRG engine\event.h(26,2): warning C4091:  'typedef ': ignored on left of 'Event_t' when no variable is declared
-C:\dev\NRG engine 2D\NRG engine\event.h(31,2): warning C4091:  'typedef ': ignored on left of 'EventHandler_t' when no variable is declared
-C:\dev\NRG engine 2D\NRG engine\MouseEvent.h(16,2): warning C4091:  'typedef ': ignored on left of 'MouseButton_t' when no variable is declared
-C:\dev\NRG engine 2D\NRG engine\MouseEvent.h(30,2): warning C4091:  'typedef ': ignored on left of 'MouseMoved_t' when no variable is declared
-C:\dev\NRG engine 2D\NRG engine\MouseEvent.h(38,2): warning C4091:  'typedef ': ignored on left of 'MousePressed_t' when no variable is declared
-C:\dev\NRG engine 2D\NRG engine\MouseEvent.h(46,2): warning C4091:  'typedef ': ignored on left of 'MouseReleased_t' when no variable is declared
+﻿  NRGmain.cpp
+  imguiImpl.cpp
+C:\dev\NRG engine 2D\NRG engine\src\imgui\imguiImpl.h(13,2): warning C4091:  'typedef ': ignored on left of 'ImGuiImpl' when no variable is declared
   Generating Code...
-C:\dev\NRG engine 2D\NRG engine\MouseEvent.h(66,2): warning C4091:  'typedef ': ignored on left of 'EventDispatcher_t' when no variable is declared
+C:\dev\NRG engine 2D\NRG engine\src\imgui\imguiImpl.h(13,2): warning C4091:  'typedef ': ignored on left of 'ImGuiImpl' when no variable is declared
   NRG engine.vcxproj -> C:\dev\NRG engine 2D\Debug\NRG engine.exe

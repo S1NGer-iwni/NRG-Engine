@@ -1,0 +1,6 @@
+[submodule "NRG"]
+	path = NRG
+	url = https://github.com/gabime/spdlog
+[submodule "NRG engine/vendor/GUI"]
+	path = NRG engine/vendor/GUI
+	url = https://github.com/ocornut/imgui
