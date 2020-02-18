@@ -19,9 +19,17 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Core\NRGmain.cpp" />
-    <ClCompile Include="src\Core\window\window.cpp" />
-    <ClCompile Include="src\imgui\imguiImpl.cpp" />
+    <ClCompile Include="src\NRG\Core\log.cpp" />
+    <ClCompile Include="src\NRG\Core\NRGmain.cpp" />
+    <ClCompile Include="src\NRG\Core\window\window.cpp" />
+    <ClCompile Include="src\NRG\imgui\imguiImpl.cpp" />
+    <ClCompile Include="src\NRG\Renderer\GraphicsContext.cpp" />
+    <ClCompile Include="src\Platform\OpenGL\Buffer.cpp" />
+    <ClCompile Include="src\Platform\OpenGL\Context.cpp" />
+    <ClCompile Include="src\Platform\OpenGL\RenderAPI.cpp" />
+    <ClCompile Include="src\Platform\OpenGL\Shader.cpp" />
+    <ClCompile Include="src\Platform\OpenGL\Texture.cpp" />
+    <ClCompile Include="src\Platform\OpenGL\VertexArray.cpp" />
     <ClCompile Include="vendor\imgui\examples\imgui_impl_glfw.cpp" />
     <ClCompile Include="vendor\imgui\examples\imgui_impl_opengl3.cpp" />
     <ClCompile Include="vendor\imgui\imgui.cpp" />
@@ -30,13 +38,21 @@
     <ClCompile Include="vendor\imgui\imgui_widgets.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Core\window\window.h" />
-    <ClInclude Include="src\Event system\event.h" />
-    <ClInclude Include="src\Event system\key.h" />
-    <ClInclude Include="src\Event system\KeyEvent.h" />
-    <ClInclude Include="src\Event system\MouseEvent.h" />
-    <ClInclude Include="src\Event system\WindowEvent.h" />
-    <ClInclude Include="src\imgui\imguiImpl.h" />
+    <ClInclude Include="src\NRG\Core\log.h" />
+    <ClInclude Include="src\NRG\Core\window\window.h" />
+    <ClInclude Include="src\NRG\Event system\event.h" />
+    <ClInclude Include="src\NRG\Event system\key.h" />
+    <ClInclude Include="src\NRG\Event system\KeyEvent.h" />
+    <ClInclude Include="src\NRG\Event system\MouseEvent.h" />
+    <ClInclude Include="src\NRG\Event system\WindowEvent.h" />
+    <ClInclude Include="src\NRG\imgui\imguiImpl.h" />
+    <ClInclude Include="src\NRG\Renderer\GraphicsContext.h" />
+    <ClInclude Include="src\Platform\OpenGL\Buffer.h" />
+    <ClInclude Include="src\Platform\OpenGL\Context.h" />
+    <ClInclude Include="src\Platform\OpenGL\RenderAPI.h" />
+    <ClInclude Include="src\Platform\OpenGL\Shader.h" />
+    <ClInclude Include="src\Platform\OpenGL\Texture.h" />
+    <ClInclude Include="src\Platform\OpenGL\VertexArray.h" />
     <ClInclude Include="vendor\imgui\examples\imgui_impl_glfw.h" />
     <ClInclude Include="vendor\imgui\examples\imgui_impl_opengl3.h" />
     <ClInclude Include="vendor\imgui\imconfig.h" />
@@ -56,13 +72,11 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
@@ -104,8 +118,11 @@
     <LibraryPath>C:\dev\NRG engine 2D\lib\OpenGL\GLFW;C:\dev\NRG engine 2D\lib\OpenGL\GL;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>C:\dev\NRG engine 2D\include;$(IncludePath)</IncludePath>
     <LibraryPath>C:\dev\NRG engine 2D\lib\OpenGL\GLFW;C:\dev\NRG engine 2D\lib\OpenGL\GL;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);C:\dev\NRG engine 2D\include</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);C:\dev\NRG engine 2D\include</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -113,7 +130,8 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>src;vendor\GLAD\include;vendor;vendor\imgui</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor;vendor\imgui;vendor\spdlog\include;</AdditionalIncludeDirectories>
+      <CallingConvention>Cdecl</CallingConvention>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -141,7 +159,8 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>src;vendor\GLAD\include;vendor;vendor\imgui</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor;vendor\imgui;vendor\spdlog\include;</AdditionalIncludeDirectories>
+      <CallingConvention>Cdecl</CallingConvention>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

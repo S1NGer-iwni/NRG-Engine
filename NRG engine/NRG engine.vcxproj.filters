@@ -1,31 +1,39 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClInclude Include="src\Event system\event.h">
-      <Filter>Event system</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Event system\key.h">
-      <Filter>Event system</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Event system\KeyEvent.h">
-      <Filter>Event system</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Event system\MouseEvent.h">
-      <Filter>Event system</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Event system\WindowEvent.h">
-      <Filter>Event system</Filter>
-    </ClInclude>
-    <ClInclude Include="vendor\imgui\examples\imgui_impl_glfw.h" />
-    <ClInclude Include="vendor\imgui\examples\imgui_impl_opengl3.h" />
     <ClInclude Include="vendor\imgui\imconfig.h" />
     <ClInclude Include="vendor\imgui\imgui.h" />
     <ClInclude Include="vendor\imgui\imgui_internal.h" />
     <ClInclude Include="vendor\imgui\imstb_rectpack.h" />
     <ClInclude Include="vendor\imgui\imstb_textedit.h" />
     <ClInclude Include="vendor\imgui\imstb_truetype.h" />
-    <ClInclude Include="src\imgui\imguiImpl.h" />
-    <ClInclude Include="src\Core\window\window.h" />
+    <ClInclude Include="src\NRG\Core\window\window.h" />
+    <ClInclude Include="src\NRG\Event system\event.h">
+      <Filter>Event system</Filter>
+    </ClInclude>
+    <ClInclude Include="src\NRG\Event system\key.h">
+      <Filter>Event system</Filter>
+    </ClInclude>
+    <ClInclude Include="src\NRG\Event system\KeyEvent.h">
+      <Filter>Event system</Filter>
+    </ClInclude>
+    <ClInclude Include="src\NRG\Event system\MouseEvent.h">
+      <Filter>Event system</Filter>
+    </ClInclude>
+    <ClInclude Include="src\NRG\Event system\WindowEvent.h">
+      <Filter>Event system</Filter>
+    </ClInclude>
+    <ClInclude Include="src\NRG\imgui\imguiImpl.h" />
+    <ClInclude Include="src\NRG\Renderer\GraphicsContext.h" />
+    <ClInclude Include="src\Platform\OpenGL\Context.h" />
+    <ClInclude Include="vendor\imgui\examples\imgui_impl_glfw.h" />
+    <ClInclude Include="vendor\imgui\examples\imgui_impl_opengl3.h" />
+    <ClInclude Include="src\Platform\OpenGL\Shader.h" />
+    <ClInclude Include="src\Platform\OpenGL\Buffer.h" />
+    <ClInclude Include="src\Platform\OpenGL\RenderAPI.h" />
+    <ClInclude Include="src\Platform\OpenGL\Texture.h" />
+    <ClInclude Include="src\Platform\OpenGL\VertexArray.h" />
+    <ClInclude Include="src\NRG\Core\log.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Core">
@@ -39,16 +47,24 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Core\NRGmain.cpp">
-      <Filter>Core</Filter>
-    </ClCompile>
-    <ClCompile Include="vendor\imgui\examples\imgui_impl_glfw.cpp" />
-    <ClCompile Include="vendor\imgui\examples\imgui_impl_opengl3.cpp" />
     <ClCompile Include="vendor\imgui\imgui.cpp" />
     <ClCompile Include="vendor\imgui\imgui_demo.cpp" />
     <ClCompile Include="vendor\imgui\imgui_draw.cpp" />
     <ClCompile Include="vendor\imgui\imgui_widgets.cpp" />
-    <ClCompile Include="src\imgui\imguiImpl.cpp" />
-    <ClCompile Include="src\Core\window\window.cpp" />
+    <ClCompile Include="src\NRG\Core\window\window.cpp" />
+    <ClCompile Include="src\NRG\Core\NRGmain.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\NRG\imgui\imguiImpl.cpp" />
+    <ClCompile Include="src\NRG\Renderer\GraphicsContext.cpp" />
+    <ClCompile Include="src\Platform\OpenGL\Context.cpp" />
+    <ClCompile Include="vendor\imgui\examples\imgui_impl_glfw.cpp" />
+    <ClCompile Include="vendor\imgui\examples\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="src\Platform\OpenGL\Shader.cpp" />
+    <ClCompile Include="src\Platform\OpenGL\Buffer.cpp" />
+    <ClCompile Include="src\Platform\OpenGL\RenderAPI.cpp" />
+    <ClCompile Include="src\Platform\OpenGL\Texture.cpp" />
+    <ClCompile Include="src\Platform\OpenGL\VertexArray.cpp" />
+    <ClCompile Include="src\NRG\Core\log.cpp" />
   </ItemGroup>
 </Project>

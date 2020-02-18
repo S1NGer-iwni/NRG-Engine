@@ -1,6 +1,4 @@
 ﻿  NRGmain.cpp
-  imguiImpl.cpp
-C:\dev\NRG engine 2D\NRG engine\src\imgui\imguiImpl.h(13,2): warning C4091:  'typedef ': ignored on left of 'ImGuiImpl' when no variable is declared
-  Generating Code...
-C:\dev\NRG engine 2D\NRG engine\src\imgui\imguiImpl.h(13,2): warning C4091:  'typedef ': ignored on left of 'ImGuiImpl' when no variable is declared
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\minwindef.h(130,1): warning C4005:  'APIENTRY': macro redefinition
+C:\dev\NRG engine 2D\include\GLFW\glfw3.h(123): message :  see previous definition of 'APIENTRY'
   NRG engine.vcxproj -> C:\dev\NRG engine 2D\Debug\NRG engine.exe

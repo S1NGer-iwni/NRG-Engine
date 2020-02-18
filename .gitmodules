@@ -4,3 +4,6 @@
 [submodule "NRG engine/vendor/GUI"]
 	path = NRG engine/vendor/GUI
 	url = https://github.com/ocornut/imgui
+[submodule "NRG engine/vendor/glm"]
+	path = NRG engine/vendor/glm
+	url = https://github.com/g-truc/glm
